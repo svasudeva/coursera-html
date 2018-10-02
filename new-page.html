@@ -3,7 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <title>New page</title>
+    <!-- Used to pass box sizing to all children cannot be put in body tag  css resetting useragent styles-->
+    <!-- background imagerelative to css file path-->
   <style>
+  *{
+  	box-sizing: border-box; 
+  	margin: 0px;
+  	padding: 0 px;
+  }
+  #box,#box1 {
+  	background-color: blue;
+  	padding: 10px 30px 10px 30px;
+  	border: 20px solid black;
+  	margin: 40px;
+  	width: 300px;
+  }
+
+  #bg{
+  	background-image: url("days-723x1024.jpg"); 
+  	background-repeat: no-repeat;
+  	background-position: right center;
+  }
+
   p{
   	color: blue;
   	font-size: 20px;
@@ -67,5 +88,19 @@
   <a href="http://facebook.com" title="facebook for screen readers" name ="section2" target="_blank">Link to Facebook</a>
   <a href="http://facebook.com" title="facebook for screen readers" target="_blank"><div>Block level Link to Facebook</div></a>
   <p>&copy; Trade &reg;</p>
+  <div id=box>
+  	<div>
+  		<p style="color: white";>test content box model; margins are cumulative if two boxes are adjacent to each otherbut they collapse if boxes are on top of each other</p>
+  		<p style="color: white";>adjacent para test margin</p>
+  	</div>
+  </div>
+    <div id=box1>
+  	<div>
+  		<p style="color: white";>test content box model; margins are cumulative if two boxes are adjacent to each otherbut they collapse if boxes are on top of each other</p>
+  	</div>
+  </div>
+	<div id="bg">
+  		<p style="color: black";>test content box model; margins are cumulative if two boxes are adjacent to each otherbut they collapse if boxes are on top of each other</p>
+  	</div>
 </body>
 </html>
